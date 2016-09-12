@@ -2,9 +2,37 @@
 <html>
 
 <head>
+    <title>Lyricify</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <nav>
+        <div class="nav-wrapper indigo darken-4">
+            <a href="#" class="brand-logo indigo darken-4">Lyricify</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down indigo darken-4">
+                <li><a href="http://eventhorizonwebdesign.com">Creator</a></li>
+                <li><a href="">Github</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row main-form ">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea indigo-text text-darken-4" placeholder="Lyrics"></textarea>
+                    <label for="textarea1"></label>
+                </div>
+            </div>
+            <div id="button-holder">
+                <a class="waves-effect waves-light btn indigo darken-4 submit">Lyricify!</a>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
