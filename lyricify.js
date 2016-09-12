@@ -7,7 +7,11 @@ function lyricify(s) {
         }
         return line;
     }).join("\n");
-    //TODO capitalize "I", "I'm", "I'll"
+    //Capitalize "I", "I'm", "I'll"
+    s = s.split(" i ").join(" I ");
+    s = s.split(" i'm ").join(" I'm ");
+    s = s.split(" im ").join(" I'm ");
+    s = s.split(" i'll ").join(" I'll ");
     //TODO replace directional apostrophes and quotes
     //TODO parse "xN" multiplicative annotations
     //Remove all remaining annotations in brackets
