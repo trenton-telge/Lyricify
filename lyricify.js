@@ -12,7 +12,11 @@ function lyricify(s) {
     s = s.split(" i'm ").join(" I'm ");
     s = s.split(" im ").join(" I'm ");
     s = s.split(" i'll ").join(" I'll ");
-    //TODO replace directional apostrophes and quotes
+    //Replace directional apostrophes and quotes
+    s = s.split("“").join("\"");
+    s = s.split("”").join("\"");
+    s = s.split("‘").join("\'");
+    s = s.split("’").join("\'");
     //TODO parse "xN" multiplicative annotations
     //Remove all remaining annotations in brackets
     s = s.replace(/ *\[[^]*\] */g, "");
