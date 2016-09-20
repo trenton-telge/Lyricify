@@ -13,15 +13,17 @@ function lyricify(s) {
     s = s.split(" im ").join(" I'm ");
     s = s.split(" i'll ").join(" I'll ");
     //Replace directional apostrophes and quotes
-    s = s.split("“").join("\"");
-    s = s.split("”").join("\"");
-    s = s.split("‘").join("\'");
-    s = s.split("’").join("\'");
+    s = s.split(" “").join(" \"");
+    s = s.split("” ").join("\" ");
+    s = s.split(" ‘").join(" \'");
+    s = s.split("’ ").join("\' ");
     //TODO parse "xN" multiplicative annotations
     //Remove all remaining annotations in brackets
-    s = s.replace(/ *\[[^]*\] */g, "");
+    s = s.replace(/\s*\[.*?\]\s*/g, '');
     //Clean up duplicate blank lines
-    s = s.replace(/\n\n\n/g, "\n\n");
+    do {
+        s = s.replace(/\n\n\n/g, "\n\n");
+    } while (s.includes("\n\n\n"));
     return s;
 }
 
