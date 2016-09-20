@@ -9,7 +9,7 @@ Lyrics formatting javascript library and standalone page for SongMeanings.com
 * Only one spacer line allowed between verses
 
 ### Usage
-1. Include the following line in your <head>
+1. Include the following line in your head tag
 
    ```html
    <script type="text/javascript" src="https://darkforce100.github.io/Lyricify/lyricify.js"></script>
