@@ -5,10 +5,11 @@ function lyricify(s) {
         if (line[0] !== undefined) {
             line = line[0].toUpperCase() + line.substr(1);
         }
-        return line;
+        return line.concat("\n");
     }).join("\n");
     //Capitalize "I", "I'm", "I'll"
     s = s.split(" i ").join(" I ");
+    s = s.split(" i.").join(" I.");
     s = s.split(" i'm ").join(" I'm ");
     s = s.split(" im ").join(" I'm ");
     s = s.split(" i'll ").join(" I'll ");
@@ -19,11 +20,7 @@ function lyricify(s) {
     s = s.split("’ ").join("\' ");
     //TODO parse "xN" multiplicative annotations
     //Remove all remaining annotations in brackets
-    s = s.replace(/\s*\[.*?\]\s*/g, '');
-    //Clean up duplicate blank lines
-    do {
-        s = s.replace(/\n\n\n/g, "\n\n");
-    } while (s.includes("\n\n\n"));
+    s = s.replace(/\s*\[.*?]\s*/g, '\n');
     return s;
 }
 
